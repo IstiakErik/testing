@@ -1,23 +1,14 @@
-import { DB } from "../../data/constants";
-import { toMariaDB } from "./mariadb";
-import { toMSSQL } from "./mssql";
-import { toMySQL } from "./mysql";
-import { toPostgres } from "./postgres";
-import { toSqlite } from "./sqlite";
-
-export function exportSQL(diagram) {
-  switch (diagram.database) {
-    case DB.SQLITE:
-      return toSqlite(diagram);
-    case DB.MYSQL:
-      return toMySQL(diagram);
-    case DB.POSTGRES:
-      return toPostgres(diagram);
-    case DB.MARIADB:
-      return toMariaDB(diagram);
-    case DB.MSSQL:
-      return toMSSQL(diagram);
-    default:
-      return "";
-  }
-}
+export { default as useAreas } from "./useAreas";
+export { default as useCanvas } from "./useCanvas";
+export { default as useFullscreen } from "./useFullscreen";
+export { default as useLayout } from "./useLayout";
+export { default as useNotes } from "./useNotes";
+export { default as useSaveState } from "./useSaveState";
+export { default as useSelect } from "./useSelect";
+export { default as useSettings } from "./useSettings";
+export { default as useDiagram } from "./useDiagram";
+export { default as useTasks } from "./useTasks";
+export { default as useTransform } from "./useTransform";
+export { default as useTypes } from "./useTypes";
+export { default as useUndoRedo } from "./useUndoRedo";
+export { default as useEnums } from "./useEnums";
